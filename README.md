@@ -22,14 +22,16 @@ ember install ember-tab-menu
 Usage
 ------------------------------------------------------------------------------
 
-Ember addon adds a simple tab menu component. You can create as many tabs as you wish. The currentTab will return the name of the currentTab or the Id if it is passed through to the item. 
+Ember addon adds a simple tab menu component. You can create as many tabs as you wish. The currentTab will return the name of the currentTab or the Id if it is passed through to the item. You can also pass through the ```currentWhen``` or ```params```  which will be passed this through to a linkTo in the component. If you do not have ```currentWhen``` added it will revert back and use the ```name``` to determine which tab is currently selected. 
+
+The addon can be used for showing different sub routes through the use of currentWhen and params. 
 
 ```
 <TabMenu @currentTab=currentTab as |tm|>
 
-    {{tm.item name='Menu 1'}}
-    {{tm.item name='Menu 2'}}
-    {{tm.item name='Menu 3'}}
+    {{tm.item name='Menu 1' currentWhen='index.pageone' params=params}}
+    {{tm.item name='Menu 2' currentWhen='index.pagetwo' params=params}}
+    {{tm.item name='Menu 3' currentWhen='index.pagethree' params=params}}
 
 </TabMenu>
 ```
