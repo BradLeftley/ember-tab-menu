@@ -1,0 +1,1 @@
+export { default } from 'ember-tab-menu/components/tab-menu';

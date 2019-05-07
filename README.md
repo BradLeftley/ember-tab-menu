@@ -1,7 +1,7 @@
 ember-tab-menu
 ==============================================================================
 
-[Short description of the addon.]
+This is a simple addon which adds a basic tab menu component. Using the currentTab variable you can show different blocks of your application depending on which of your tabs is currently selected.
 
 
 Compatibility
@@ -22,7 +22,17 @@ ember install ember-tab-menu
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+Ember addon adds a simple tab menu component. You can create as many tabs as you wish. The currentTab will return the name of the currentTab or the Id if it is passed through to the item. 
+
+```
+<TabMenu @currentTab=currentTab as |tm|>
+
+    {{tm.item name='Menu 1'}}
+    {{tm.item name='Menu 2'}}
+    {{tm.item name='Menu 3'}}
+
+</TabMenu>
+```
 
 
 Contributing
